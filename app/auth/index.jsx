@@ -4,9 +4,23 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { images } from '../../constants';
 import { useRouter } from 'expo-router';
 import CustomButton from '../../components/CustomButton';
-
+import { client } from '../../utils/KindeConfig';
+import { storeData } from '../../utils/Services';
 const Index = () => {
   const router = useRouter();
+
+  const dummyToken = ()=>{
+    return true;
+  }
+  const handleSignIn = async () => {
+    // const token = await client.login();
+    console.log('handle signin pressed')
+    const token = dummyToken();
+    router.replace('/')
+    if (token) {
+      await storeData('login', 'true');
+    }
+  };
   
   return (
     <SafeAreaView className="h-full flex-1 bg-primary">
@@ -25,6 +39,7 @@ const Index = () => {
             title="Login/Signup"
             textStyles={"text-white"}
             containerStyles={"mt-12 "}
+            handlePress = {handleSignIn}
         />
       </View>
     </SafeAreaView>

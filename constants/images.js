@@ -1,4 +1,4 @@
 import logo from '../assets/images/logo.png'
 import bg from '../assets/images/bg.png'
-
-export default {logo, bg};
+import logout from '../assets/images/logout.png'
+export default {logo, bg, logout};
