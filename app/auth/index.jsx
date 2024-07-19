@@ -12,12 +12,15 @@ const Index = () => {
   const dummyToken = ()=>{
     return true;
   }
+
+
   const handleSignIn = async () => {
-    // const token = await client.login();
+    const token = await client.login();
     console.log('handle signin pressed')
-    const token = dummyToken();
+    // const token = dummyToken();
     router.replace('/')
     if (token) {
+      console.log("got the token user is authenticated!")
       await storeData('login', 'true');
     }
   };

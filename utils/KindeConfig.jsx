@@ -1,12 +1,12 @@
 import { KindeSDK } from '@kinde-oss/react-native-sdk-0-7x';
 
 
+
+
 KINDE_ISSUER_URL='https://moneymonk.kinde.com'
 KINDE_POST_CALLBACK_URL='exp://192.168.202.128:8081'
 KINDE_POST_LOGOUT_REDIRECT_URL='exp://192.168.202.128:8081'
 KINDE_CLIENT_ID='33b72dc9d4b7412dbd64faa844332fa4'
 
 export const client = new KindeSDK(KINDE_ISSUER_URL, KINDE_POST_CALLBACK_URL, KINDE_CLIENT_ID, KINDE_POST_LOGOUT_REDIRECT_URL);
-
-
 
